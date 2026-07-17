@@ -6,6 +6,7 @@ export interface Project {
   stack: Record<string, string[]>;
   desc: string;
   metrics?: { label: string; value: string }[];
+  images?: string[];
   problemSolving?: {
     problem: string;
     solution: string;

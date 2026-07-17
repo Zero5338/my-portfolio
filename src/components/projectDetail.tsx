@@ -121,7 +121,7 @@ export function ProjectDetail({ proj }: { proj: Project }) {
           )}
 
           {/* 기술 스택 */}
-          <div
+          {/* <div
             style={{
               display: "flex",
               flexDirection: "column",
@@ -163,8 +163,55 @@ export function ProjectDetail({ proj }: { proj: Project }) {
                 </div>
               </div>
             ))}
-          </div>
-
+          </div> */}
+          {/* 스크린샷 갤러리 */}
+          {proj.images && (
+            <div style={{ marginBottom: "24px", breakInside: "avoid" }}>
+              <p
+                style={{
+                  fontFamily: "'DM Mono', monospace",
+                  fontSize: "9px",
+                  color: proj.color,
+                  textTransform: "uppercase",
+                  letterSpacing: "0.15em",
+                  marginBottom: "10px",
+                }}
+              >
+                Screens
+              </p>
+              <div
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "repeat(4, 1fr)",
+                  gap: "6px",
+                }}
+              >
+                {proj.images.map((src, i) => (
+                  <div
+                    key={i}
+                    style={{
+                      aspectRatio: "4 / 3",
+                      border: "1px solid rgba(28,24,20,0.12)",
+                      borderRadius: "2px",
+                      overflow: "hidden",
+                      background: "#fff",
+                    }}
+                  >
+                    <img
+                      src={src}
+                      alt={`${proj.name} 스크린샷 ${i + 1}`}
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                        display: "block",
+                      }}
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
           {/* 문제 해결 과정 */}
           {proj.problemSolving && (
             <div style={{ marginBottom: "20px" }}>

@@ -57,7 +57,7 @@ export const PROJECTS: Project[] = [
   {
     name: "무빙(Moving24)",
     subtitle: "이사중개 O2O 플랫폼",
-    period: "팀원 8명, 2025.03 — 2025.04 (6주)",
+    period: "팀원 8명, 2025.02 — 2025.04 (10주)",
     stack: {
       Frontend: [
         "TypeScript",
@@ -114,14 +114,24 @@ export const PROJECTS: Project[] = [
     color: "#16A34A",
   },
   {
-    name: "UIKit",
-    subtitle: "사내 디자인 시스템 (인턴십)",
-    period: "2023.07 — 2023.08",
-    role: "프론트엔드 개발 (단독 진행)",
+    name: "무빙",
+    subtitle: "이사중개 O2O 플랫폼",
+    period: "2025.02 — 2025.04, 2026.06 (11주)",
+    role: "프론트엔드 개발 (팀원 8명)",
     stack: {
-      Frontend: ["React", "Storybook", "CSS Modules"],
-      Infra: ["Chromatic"],
+      // Frontend: ["React", "Storybook", "CSS Modules"],
+      // Infra: ["Chromatic"],
     },
+    images: [
+      "/moving/메인화면.png",
+      "/moving/유저견적요청페이지.png",
+      "/moving/로그인페이지.png",
+      "/moving/기사님 찾기.png",
+      "/moving/기사님,유저 선택창.png",
+      "/moving/기사님견적요청페이지.png",
+      "/moving/기사님 마이페이지.png",
+      "/moving/작성가능한리뷰.png",
+    ],
     desc: "핀테크 스타트업 인턴으로 참여해 공통 컴포넌트 라이브러리 개발. Button·Input·Modal 등 12종 컴포넌트를 ARIA 기준에 맞게 구현.",
     metrics: [
       { label: "컴포넌트", value: "12종" },
