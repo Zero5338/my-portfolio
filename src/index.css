@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #faf8f3;
+  --foreground: #1c1814;
+  --accent: #8b2020;
+  --accent-foreground: #faf8f3;
+  --muted-foreground: #7a7268;
+  --border: rgba(28, 24, 20, 0.12);
+}
