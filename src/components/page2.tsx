@@ -1,6 +1,6 @@
 import type { CSSProperties } from "react";
 import { SectionLabel } from "./sectionLabel";
-import { ProjectCard } from "./projectCard";
+import { ProjectDetail } from "./projectDetail";
 import { PROFILE, PROJECTS } from "../data/portfolio";
 
 export function Page2({ print }: { print?: boolean }) {
@@ -85,16 +85,9 @@ export function Page2({ print }: { print?: boolean }) {
         </span>
       </div>
 
-      <SectionLabel number="06" label="프로젝트 상세 (계속)" />
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          gap: "16px",
-          marginBottom: "36px",
-        }}
-      >
-        <ProjectCard proj={PROJECTS[2]} />
+      <SectionLabel number="06" label="프로젝트 상세" />
+      <div style={{ marginBottom: "36px" }}>
+        <ProjectDetail proj={PROJECTS[2]} />
       </div>
 
       <div

@@ -2,8 +2,15 @@ export interface Project {
   name: string;
   subtitle: string;
   period: string;
+  role?: string;
   stack: Record<string, string[]>;
   desc: string;
+  metrics?: { label: string; value: string }[];
+  problemSolving?: {
+    problem: string;
+    solution: string;
+    result: string;
+  }[];
   highlights: string[];
   github: string | Record<string, string>;
   live: string | null;

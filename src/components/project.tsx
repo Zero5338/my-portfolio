@@ -1,6 +1,6 @@
 import type { Project } from "../types/portfolio";
 
-export function ProjectCard({ proj }: { proj: Project }) {
+export function Project({ proj }: { proj: Project }) {
   return (
     <div
       style={{

@@ -1,6 +1,6 @@
 import type { CSSProperties } from "react";
 import { SectionLabel } from "./sectionLabel";
-import { ProjectCard } from "./projectCard";
+import { Project } from "./project";
 import { PROFILE, TECH_SKILLS, EDUCATION, PROJECTS } from "../data/portfolio";
 
 export function Page1({ print }: { print?: boolean }) {
@@ -263,8 +263,8 @@ export function Page1({ print }: { print?: boolean }) {
             <div
               style={{ display: "flex", flexDirection: "column", gap: "16px" }}
             >
-              <ProjectCard proj={PROJECTS[0]} />
-              <ProjectCard proj={PROJECTS[1]} />
+              <Project proj={PROJECTS[0]} />
+              <Project proj={PROJECTS[1]} />
             </div>
           </section>
         </div>

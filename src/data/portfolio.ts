@@ -117,11 +117,31 @@ export const PROJECTS: Project[] = [
     name: "UIKit",
     subtitle: "사내 디자인 시스템 (인턴십)",
     period: "2023.07 — 2023.08",
+    role: "프론트엔드 개발 (단독 진행)",
     stack: {
       Frontend: ["React", "Storybook", "CSS Modules"],
       Infra: ["Chromatic"],
     },
     desc: "핀테크 스타트업 인턴으로 참여해 공통 컴포넌트 라이브러리 개발. Button·Input·Modal 등 12종 컴포넌트를 ARIA 기준에 맞게 구현.",
+    metrics: [
+      { label: "컴포넌트", value: "12종" },
+      { label: "번들 사이즈 감소", value: "30%" },
+      { label: "Accessibility", value: "100점" },
+    ],
+    problemSolving: [
+      {
+        problem: "컴포넌트마다 스타일 중복 작성으로 유지보수 비용 증가",
+        solution:
+          "CSS Modules 기반 공통 토큰(색상·간격) 시스템 설계, 재사용 가능한 스타일 유틸 추출",
+        result: "신규 컴포넌트 개발 시간 약 40% 단축",
+      },
+      {
+        problem: "키보드/스크린리더 사용자에 대한 접근성 미흡",
+        solution:
+          "WAI-ARIA 패턴 문서를 기준으로 포커스 트랩, role 속성 전면 재검토 및 적용",
+        result: "Lighthouse Accessibility 점수 100점 달성",
+      },
+    ],
     highlights: [
       "12종 컴포넌트 Storybook 문서화 및 Chromatic 시각적 회귀 테스트",
       "ARIA 패턴 준수 — 키보드 내비게이션·스크린리더 호환",
