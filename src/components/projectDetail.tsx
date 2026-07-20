@@ -72,7 +72,53 @@ export function ProjectDetail({ proj }: { proj: Project }) {
           >
             {proj.desc}
           </p>
-
+          {proj.images && (
+            <div style={{ marginBottom: "24px", breakInside: "avoid" }}>
+              <p
+                style={{
+                  fontFamily: "'DM Mono', monospace",
+                  fontSize: "9px",
+                  color: proj.color,
+                  textTransform: "uppercase",
+                  letterSpacing: "0.15em",
+                  marginBottom: "10px",
+                }}
+              >
+                Screens
+              </p>
+              <div
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "repeat(4, 1fr)",
+                  gap: "6px",
+                }}
+              >
+                {proj.images.map((src, i) => (
+                  <div
+                    key={i}
+                    style={{
+                      aspectRatio: "4 / 3",
+                      border: "1px solid rgba(28,24,20,0.12)",
+                      borderRadius: "2px",
+                      overflow: "hidden",
+                      background: "#fff",
+                    }}
+                  >
+                    <img
+                      src={src}
+                      alt={`${proj.name} 스크린샷 ${i + 1}`}
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                        display: "block",
+                      }}
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
           {/* 주요 지표 */}
           {proj.metrics && (
             <div
@@ -165,54 +211,7 @@ export function ProjectDetail({ proj }: { proj: Project }) {
             ))}
           </div> */}
           {/* 스크린샷 갤러리 */}
-          {proj.images && (
-            <div style={{ marginBottom: "24px", breakInside: "avoid" }}>
-              <p
-                style={{
-                  fontFamily: "'DM Mono', monospace",
-                  fontSize: "9px",
-                  color: proj.color,
-                  textTransform: "uppercase",
-                  letterSpacing: "0.15em",
-                  marginBottom: "10px",
-                }}
-              >
-                Screens
-              </p>
-              <div
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: "repeat(4, 1fr)",
-                  gap: "6px",
-                }}
-              >
-                {proj.images.map((src, i) => (
-                  <div
-                    key={i}
-                    style={{
-                      aspectRatio: "4 / 3",
-                      border: "1px solid rgba(28,24,20,0.12)",
-                      borderRadius: "2px",
-                      overflow: "hidden",
-                      background: "#fff",
-                    }}
-                  >
-                    <img
-                      src={src}
-                      alt={`${proj.name} 스크린샷 ${i + 1}`}
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "cover",
-                        display: "block",
-                      }}
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-          {/* 문제 해결 과정 */}
+
           {proj.problemSolving && (
             <div style={{ marginBottom: "20px" }}>
               <p
@@ -222,7 +221,7 @@ export function ProjectDetail({ proj }: { proj: Project }) {
                   color: proj.color,
                   textTransform: "uppercase",
                   letterSpacing: "0.15em",
-                  marginBottom: "12px",
+                  marginBottom: "16px",
                 }}
               >
                 Problem Solving
@@ -231,43 +230,75 @@ export function ProjectDetail({ proj }: { proj: Project }) {
                 style={{
                   display: "flex",
                   flexDirection: "column",
-                  gap: "16px",
+                  gap: "26px",
                 }}
               >
                 {proj.problemSolving.map((ps, i) => (
                   <div
                     key={i}
                     style={{
-                      paddingLeft: "14px",
+                      paddingLeft: "16px",
                       borderLeft: `2px solid ${proj.color}30`,
                     }}
                   >
                     <p
                       style={{
-                        fontSize: "11.5px",
+                        fontFamily: "'Playfair Display', serif",
+                        fontSize: "14px",
                         color: "#1C1814",
-                        fontWeight: 600,
-                        marginBottom: "4px",
+                        fontWeight: 700,
+                        lineHeight: 1.5,
+                        marginBottom: "10px",
                       }}
                     >
                       {i + 1}. {ps.problem}
                     </p>
-                    <p
-                      style={{
-                        fontSize: "11px",
-                        color: "#4A4540",
-                        lineHeight: 1.65,
-                        marginBottom: "4px",
-                      }}
-                    >
-                      <span style={{ color: "#7A7268" }}>→ </span>
-                      {ps.solution}
-                    </p>
+
+                    {/* {ps.action && (
+                      <p
+                        style={{
+                          fontSize: "11px",
+                          color: "#4A4540",
+                          lineHeight: 1.8,
+                          marginBottom: "8px",
+                        }}
+                      >
+                        {ps.action}
+                      </p>
+                    )} */}
+
+                    {/* {ps.analysis && (
+                      <p
+                        style={{
+                          fontSize: "11px",
+                          color: "#4A4540",
+                          lineHeight: 1.8,
+                          marginBottom: "10px",
+                        }}
+                      >
+                        {ps.analysis}
+                      </p>
+                    )} */}
+
+                    {/* {!ps.action && ps.solution && (
+                      <p
+                        style={{
+                          fontSize: "11px",
+                          color: "#4A4540",
+                          lineHeight: 1.8,
+                          marginBottom: "10px",
+                        }}
+                      >
+                        {ps.solution}
+                      </p>
+                    )} */}
+
                     <p
                       style={{
                         fontFamily: "'DM Mono', monospace",
-                        fontSize: "9.5px",
+                        fontSize: "10px",
                         color: proj.color,
+                        fontWeight: 500,
                       }}
                     >
                       ✓ {ps.result}

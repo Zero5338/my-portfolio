@@ -9,7 +9,9 @@ export interface Project {
   images?: string[];
   problemSolving?: {
     problem: string;
+    // action: string;
     solution: string;
+    // analysis: string
     result: string;
   }[];
   highlights: string[];

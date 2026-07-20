@@ -75,7 +75,7 @@ export function Page1({ print }: { print?: boolean }) {
           <img
             src={PROFILE.photo}
             alt={PROFILE.name}
-            style={{ width: "100%", height: "100%", objectFit: "cover" }}
+            style={{ width: "100%", height: "110%", objectFit: "cover" }}
           />
         </div>
         <div style={{ flex: 1 }}>
