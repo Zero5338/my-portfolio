@@ -165,53 +165,6 @@ export function ProjectDetail({ proj }: { proj: Project }) {
               ))}
             </div>
           )}
-
-          {/* 기술 스택 */}
-          {/* <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "10px",
-              marginBottom: "24px",
-            }}
-          >
-            {Object.entries(proj.stack).map(([groupName, items]) => (
-              <div key={groupName}>
-                <p
-                  style={{
-                    fontFamily: "'DM Mono', monospace",
-                    fontSize: "8px",
-                    color: "#7A7268",
-                    textTransform: "uppercase",
-                    letterSpacing: "0.12em",
-                    marginBottom: "5px",
-                  }}
-                >
-                  {groupName}
-                </p>
-                <div style={{ display: "flex", flexWrap: "wrap", gap: "5px" }}>
-                  {items.map((s) => (
-                    <span
-                      key={s}
-                      style={{
-                        fontFamily: "'DM Mono', monospace",
-                        fontSize: "9px",
-                        color: proj.color,
-                        border: `1px solid ${proj.color}35`,
-                        background: `${proj.color}08`,
-                        padding: "2px 9px",
-                        borderRadius: "99px",
-                      }}
-                    >
-                      {s}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div> */}
-          {/* 스크린샷 갤러리 */}
-
           {proj.problemSolving && (
             <div style={{ marginBottom: "20px" }}>
               <p
@@ -253,46 +206,6 @@ export function ProjectDetail({ proj }: { proj: Project }) {
                     >
                       {i + 1}. {ps.problem}
                     </p>
-
-                    {/* {ps.action && (
-                      <p
-                        style={{
-                          fontSize: "11px",
-                          color: "#4A4540",
-                          lineHeight: 1.8,
-                          marginBottom: "8px",
-                        }}
-                      >
-                        {ps.action}
-                      </p>
-                    )} */}
-
-                    {/* {ps.analysis && (
-                      <p
-                        style={{
-                          fontSize: "11px",
-                          color: "#4A4540",
-                          lineHeight: 1.8,
-                          marginBottom: "10px",
-                        }}
-                      >
-                        {ps.analysis}
-                      </p>
-                    )} */}
-
-                    {/* {!ps.action && ps.solution && (
-                      <p
-                        style={{
-                          fontSize: "11px",
-                          color: "#4A4540",
-                          lineHeight: 1.8,
-                          marginBottom: "10px",
-                        }}
-                      >
-                        {ps.solution}
-                      </p>
-                    )} */}
-
                     <p
                       style={{
                         fontFamily: "'DM Mono', monospace",
