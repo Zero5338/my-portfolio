@@ -20,6 +20,7 @@ export default function App() {
           page-break-after: avoid;
           break-after: avoid;
         }
+        
       }
     `;
     document.head.appendChild(style);

@@ -177,6 +177,56 @@ export function ProjectDetail({ proj }: { proj: Project }) {
                   marginBottom: "16px",
                 }}
               >
+                {/* 담당 기능 */}
+                {proj.contributions && (
+                  <div style={{ marginBottom: "24px" }}>
+                    <p
+                      style={{
+                        fontFamily: "'DM Mono', monospace",
+                        fontSize: "9px",
+                        color: proj.color,
+                        textTransform: "uppercase",
+                        letterSpacing: "0.15em",
+                        marginBottom: "12px",
+                      }}
+                    >
+                      담당 개발내용
+                    </p>
+                    <div
+                      style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: "12px",
+                      }}
+                    >
+                      {proj.contributions.map((c, i) => (
+                        <div key={i}>
+                          <p
+                            style={{
+                              fontSize: "15px",
+                              fontWeight: 600,
+                              color: "#1C1814",
+                              marginBottom: c.description ? "3px" : 0,
+                            }}
+                          >
+                            {c.title}
+                          </p>
+                          {c.description && (
+                            <p
+                              style={{
+                                fontSize: "12px",
+                                color: "#4A4540",
+                                lineHeight: 1.6,
+                              }}
+                            >
+                              {c.description}
+                            </p>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
                 Problem Solving
               </p>
               <div

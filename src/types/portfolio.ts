@@ -9,13 +9,16 @@ export interface Project {
   images?: string[];
   problemSolving?: {
     problem: string;
-    solution: string;
+    solution?: string;
     result: string;
+    action?: string;
+    analysis?: string;
   }[];
   highlights: string[];
   github: string | Record<string, string>;
   live: string | null;
   color: string;
+  contributions?: { title: string; description?: string }[];
 }
 
 export interface TechSkillGroup {
