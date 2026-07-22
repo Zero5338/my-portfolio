@@ -48,7 +48,6 @@ export function ProjectDetail({ proj }: { proj: Project }) {
               {proj.period}
             </span>
           </div>
-
           {proj.role && (
             <p
               style={{
@@ -61,7 +60,6 @@ export function ProjectDetail({ proj }: { proj: Project }) {
               ROLE · {proj.role}
             </p>
           )}
-
           <p
             style={{
               fontSize: "12px",
@@ -165,8 +163,9 @@ export function ProjectDetail({ proj }: { proj: Project }) {
               ))}
             </div>
           )}
-          {proj.problemSolving && (
-            <div style={{ marginBottom: "20px" }}>
+          {/* 담당 기능 */}
+          {proj.contributions && (
+            <div style={{ marginBottom: "24px" }}>
               <p
                 style={{
                   fontFamily: "'DM Mono', monospace",
@@ -174,129 +173,46 @@ export function ProjectDetail({ proj }: { proj: Project }) {
                   color: proj.color,
                   textTransform: "uppercase",
                   letterSpacing: "0.15em",
-                  marginBottom: "16px",
+                  marginBottom: "12px",
                 }}
               >
-                {/* 담당 기능 */}
-                {proj.contributions && (
-                  <div style={{ marginBottom: "24px" }}>
-                    <p
-                      style={{
-                        fontFamily: "'DM Mono', monospace",
-                        fontSize: "9px",
-                        color: proj.color,
-                        textTransform: "uppercase",
-                        letterSpacing: "0.15em",
-                        marginBottom: "12px",
-                      }}
-                    >
-                      담당 개발내용
-                    </p>
-                    <div
-                      style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        gap: "12px",
-                      }}
-                    >
-                      {proj.contributions.map((c, i) => (
-                        <div key={i}>
-                          <p
-                            style={{
-                              fontSize: "15px",
-                              fontWeight: 600,
-                              color: "#1C1814",
-                              marginBottom: c.description ? "3px" : 0,
-                            }}
-                          >
-                            {c.title}
-                          </p>
-                          {c.description && (
-                            <p
-                              style={{
-                                fontSize: "12px",
-                                color: "#4A4540",
-                                lineHeight: 1.6,
-                              }}
-                            >
-                              {c.description}
-                            </p>
-                          )}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
-                Problem Solving
+                담당 개발내용
               </p>
               <div
                 style={{
                   display: "flex",
                   flexDirection: "column",
-                  gap: "26px",
+                  gap: "12px",
                 }}
               >
-                {proj.problemSolving.map((ps, i) => (
-                  <div
-                    key={i}
-                    style={{
-                      paddingLeft: "16px",
-                      borderLeft: `2px solid ${proj.color}30`,
-                    }}
-                  >
+                {proj.contributions.map((c, i) => (
+                  <div key={i}>
                     <p
                       style={{
-                        fontFamily: "'Playfair Display', serif",
-                        fontSize: "14px",
+                        fontSize: "15px",
+                        fontWeight: 600,
                         color: "#1C1814",
-                        fontWeight: 700,
-                        lineHeight: 1.5,
-                        marginBottom: "10px",
+                        marginBottom: c.description ? "3px" : 0,
                       }}
                     >
-                      {i + 1}. {ps.problem}
+                      {c.title}
                     </p>
-                    <p
-                      style={{
-                        fontFamily: "'DM Mono', monospace",
-                        fontSize: "10px",
-                        color: proj.color,
-                        fontWeight: 500,
-                      }}
-                    >
-                      ✓ {ps.result}
-                    </p>
+                    {c.description && (
+                      <p
+                        style={{
+                          fontSize: "12px",
+                          color: "#4A4540",
+                          lineHeight: 1.6,
+                        }}
+                      >
+                        {c.description}
+                      </p>
+                    )}
                   </div>
                 ))}
               </div>
             </div>
           )}
-
-          {/* 주요 성과 */}
-          <ul
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "4px",
-              marginBottom: "16px",
-            }}
-          >
-            {proj.highlights.map((h, i) => (
-              <li
-                key={i}
-                style={{
-                  display: "flex",
-                  gap: "6px",
-                  fontSize: "10.5px",
-                  color: "#4A4540",
-                  lineHeight: 1.6,
-                }}
-              >
-                <span style={{ color: proj.color, flexShrink: 0 }}>▸</span>
-                <span>{h}</span>
-              </li>
-            ))}
-          </ul>
 
           {/* 링크 */}
           <div

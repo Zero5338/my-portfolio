@@ -16,7 +16,7 @@ export function Page1({ print }: { print?: boolean }) {
     : {
         width: "794px",
         minHeight: "1123px",
-        padding: "60px 56px",
+        padding: "30px 56px",
         background: "#FAF8F3",
         position: "relative",
         overflow: "hidden",
@@ -57,7 +57,7 @@ export function Page1({ print }: { print?: boolean }) {
           display: "flex",
           alignItems: "flex-end",
           gap: "28px",
-          marginBottom: "32px",
+          marginBottom: "10px",
           paddingBottom: "28px",
           borderBottom: "1px solid rgba(28,24,20,0.12)",
         }}
@@ -135,20 +135,18 @@ export function Page1({ print }: { print?: boolean }) {
             flexShrink: 0,
           }}
         >
-          {[PROFILE.email, PROFILE.phone, PROFILE.github, PROFILE.blog].map(
-            (val) => (
-              <span
-                key={val}
-                style={{
-                  fontFamily: "'DM Mono', monospace",
-                  fontSize: "9px",
-                  color: "#7A7268",
-                }}
-              >
-                {val}
-              </span>
-            )
-          )}
+          {[PROFILE.email, PROFILE.phone, PROFILE.github].map((val) => (
+            <span
+              key={val}
+              style={{
+                fontFamily: "'DM Mono', monospace",
+                fontSize: "9px",
+                color: "#7A7268",
+              }}
+            >
+              {val}
+            </span>
+          ))}
         </div>
       </header>
 

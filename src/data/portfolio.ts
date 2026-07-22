@@ -12,7 +12,7 @@ export const PROFILE = {
   email: "ghost111789@gmail.com",
   phone: "+82 10-3046-8656",
   github: "https://github.com/Zero5338",
-  blog: "https://velog.io/@taehoon1195/posts",
+  // blog: "https://velog.io/@taehoon1195/posts",
   photo: "/profileImg.jpg",
   about: `기술을 통한 진보로 일상의 변화를 추구합니다. 저는 개발을 단순한 기능 구현을 넘어서, 사람들의 일상을 바꾸는 도구를 만드는 일이라고 생각합니다. 작은 기능 하나가 누군가의 일상을 더 편하고 즐겁게 만들 수 있다는 믿음으로 개발하고 있으며, 그 기술이 만들어내는 '변화'에 집중하는 개발자입니다.`,
 };
@@ -87,8 +87,8 @@ export const PROJECTS: Project[] = [
       "기사님 마이페이지, 기사님 작성된 리뷰페이지 개발",
     ],
     github: {
-      FE: "github.com/Zero5338/moving-refactoring-FE",
-      BE: "github.com/Zero5338/moving-refactoring-BE",
+      FE: "https://github.com/Zero5338/moving-refactoring-FE",
+      BE: "https://github.com/Zero5338/moving-refactoring-BE",
     },
     live: "https://moving24.duckdns.org/",
     color: "#2D5BE3",
@@ -107,8 +107,8 @@ export const PROJECTS: Project[] = [
       "Docker 도입에 따른 서비스 간 통신 주소 변경 - 관련 설정 일괄 정비",
     ],
     github: {
-      FE: "github.com/Zero5338/moving-refactoring-FE",
-      BE: "github.com/Zero5338/moving-refactoring-BE",
+      FE: "https://github.com/Zero5338/moving-refactoring-FE",
+      BE: "https://github.com/Zero5338/moving-refactoring-BE",
     },
     live: "https://moving24.duckdns.org/",
     color: "#16A34A",
@@ -168,31 +168,14 @@ export const PROJECTS: Project[] = [
         description: `공통 컴포넌트와 API를 조합해 기사님 마이페이지, 완료된 리뷰 페이지를 구현했습니다. 특히 완료된 리뷰 페이지는 로딩이 끝난 뒤에만 빈 상태 여부를 판단하도록 설계해 화면이 깜빡이지 않도록 했고, 데이터가 없을 때도 "리뷰 작성하러 가기" 버튼을 배치해 사용자가 막다른 화면에서 멈추지 않고 다음 행동으로 이어지도록 UX를 신경 썼습니다.`,
       },
     ],
-    problemSolving: [
-      {
-        problem:
-          "Atomic Design 기반 공통 컴포넌트 설계 시, 분류 기준과 타입 지정 범위에 대한 팀 내 기준 부재로 재작업과 개발 지연 발생",
-        action:
-          "팀원마다 Atoms·Molecules·Organisms의 경계 판단이 달라 간단한 버튼까지 과도하게 컴포넌트화되며 하루 치 작업을 전면 재작업하는 상황이 발생. 이를 계기로 공통 컴포넌트 판단 기준을 플로우차트로 직접 정리해 팀에 공유. 이어서 색상 등 경우의 수가 많은 속성의 타입 지정 범위를 어디까지 세분화할지 고민, 블루·그레이·그린·옐로우처럼 대표값 4가지로 제한하고 나머지는 커스텀 타입으로 확장 가능하도록 절충안 마련.",
-        analysis:
-          "타입을 세분화할수록 개발 시간은 늘어나지만 사용 편의성이 비례해서 좋아지지 않는다는 점을 확인. 완벽한 세분화보다 시간 대비 편의성의 균형점을 찾는 것이 더 합리적인 판단이라는 결론에 도달.",
-        result:
-          "판단 기준 수립 후 작업 진행률 2일차 10% → 3일차 90% 상승, 타입 절충안으로 팀 전체 개발 생산성과 사용 편의성 동시 확보",
-      },
-      {
-        problem: "키보드/스크린리더 사용자에 대한 접근성 미흡",
-        solution:
-          "WAI-ARIA 패턴 문서를 기준으로 포커스 트랩, role 속성 전면 재검토 및 적용",
-        result: "Lighthouse Accessibility 점수 100점 달성",
-      },
-    ],
+
     highlights: [
       "12종 컴포넌트 Storybook 문서화 및 Chromatic 시각적 회귀 테스트",
       "ARIA 패턴 준수 — 키보드 내비게이션·스크린리더 호환",
       "번들 사이즈 30% 감소 (tree-shaking 적용)",
     ],
-    github: "github.com/seojunlee/uikit",
-    live: null,
+    github: "https://github.com/Zero5338/moving-refactoring-FE",
+    live: `https://moving24.duckdns.org/`,
     color: "#8B2020",
   },
 ];

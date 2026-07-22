@@ -20,7 +20,14 @@ export default function App() {
           page-break-after: avoid;
           break-after: avoid;
         }
-        
+        section, .avoid-break {
+          break-inside: avoid;
+          page-break-inside: avoid;
+        }
+        h1, h2, h3, p {
+          orphans: 3;
+          widows: 3;
+        }
       }
     `;
     document.head.appendChild(style);

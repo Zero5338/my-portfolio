@@ -119,8 +119,7 @@ export function Page2({ print }: { print?: boolean }) {
               maxWidth: "340px",
             }}
           >
-            "코드 한 줄이 수백만 명의 경험을 바꿀 수 있다는 것, 그게
-            프론트엔드가 재미있는 이유입니다."
+            "개발을 통해 일상의 변화를 추구하는 프론트엔드 개발자 김태훈입니다."
           </p>
         </div>
         <div style={{ textAlign: "right" }}>

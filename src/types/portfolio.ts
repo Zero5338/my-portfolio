@@ -7,13 +7,6 @@ export interface Project {
   desc: string;
   metrics?: { label: string; value: string }[];
   images?: string[];
-  problemSolving?: {
-    problem: string;
-    solution?: string;
-    result: string;
-    action?: string;
-    analysis?: string;
-  }[];
   highlights: string[];
   github: string | Record<string, string>;
   live: string | null;
